@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_hero_cards",
+  "info": {
+    "displayName": "HeroCard",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

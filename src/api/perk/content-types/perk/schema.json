@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perks",
+  "info": {
+    "singularName": "perk",
+    "pluralName": "perks",
+    "displayName": "Perk"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "long_description": {
+      "type": "text"
+    },
+    "redemption_method": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "affiliate_link",
+        "coupon_code",
+        "form_submission"
+      ]
+    },
+    "redemption_value": {
+      "type": "string",
+      "required": true
+    },
+    "valid_from": {
+      "type": "date"
+    },
+    "valid_to": {
+      "type": "date"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "vendor_name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "perks"
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "perks"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "perks"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "og_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

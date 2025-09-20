@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_headers",
+  "info": {
+    "displayName": "Header",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "component",
+      "component": "components.title",
+      "repeatable": false
+    },
+    "SubTitle": {
+      "type": "component",
+      "component": "components.subtitle",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

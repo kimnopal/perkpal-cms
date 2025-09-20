@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_components_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "HeroCard": {
+      "type": "component",
+      "component": "components.hero-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

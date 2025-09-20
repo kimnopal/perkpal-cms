@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_components_subtitles",
+  "info": {
+    "displayName": "Subtitle",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
