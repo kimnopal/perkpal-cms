@@ -18,6 +18,11 @@
         "subtitle": {
             "type": "string",
             "required": true
+        },
+        "SEO": {
+            "type": "component",
+            "component": "components.seo",
+            "repeatable": false
         }
     }
 }

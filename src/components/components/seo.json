@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

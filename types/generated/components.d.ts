@@ -50,6 +50,18 @@ export interface ComponentsHeroCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsSeo extends Struct.ComponentSchema {
+  collectionName: 'components_components_seos';
+  info: {
+    displayName: 'SEO';
+    icon: 'bell';
+  };
+  attributes: {
+    meta_description: Schema.Attribute.String;
+    meta_title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsSubtitle extends Struct.ComponentSchema {
   collectionName: 'components_components_subtitles';
   info: {
@@ -79,6 +91,7 @@ declare module '@strapi/strapi' {
       'components.header': ComponentsHeader;
       'components.hero': ComponentsHero;
       'components.hero-card': ComponentsHeroCard;
+      'components.seo': ComponentsSeo;
       'components.subtitle': ComponentsSubtitle;
       'components.title': ComponentsTitle;
     }
