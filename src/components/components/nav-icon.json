@@ -7,14 +7,15 @@
   "options": {},
   "attributes": {
     "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "text",
+      "required": true
     },
-    "href": {
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::link.link"
+    },
+    "name": {
       "type": "string",
       "required": true
     }

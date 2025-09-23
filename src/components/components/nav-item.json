@@ -10,9 +10,10 @@
       "type": "string",
       "required": true
     },
-    "href": {
-      "type": "string",
-      "required": true
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::link.link"
     }
   },
   "config": {}

@@ -530,6 +530,31 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLinkLink extends Struct.CollectionTypeSchema {
+  collectionName: 'links';
+  info: {
+    displayName: 'Link';
+    pluralName: 'links';
+    singularName: 'link';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    href: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::link.link'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
   collectionName: 'navbars';
   info: {
@@ -1176,6 +1201,7 @@ declare module '@strapi/strapi' {
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::link.link': ApiLinkLink;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::perk.perk': ApiPerkPerk;
       'api::sub-category.sub-category': ApiSubCategorySubCategory;

@@ -69,8 +69,9 @@ export interface ComponentsNavIcon extends Struct.ComponentSchema {
     icon: 'check';
   };
   attributes: {
-    href: Schema.Attribute.String & Schema.Attribute.Required;
-    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    icon: Schema.Attribute.Text & Schema.Attribute.Required;
+    link: Schema.Attribute.Relation<'oneToOne', 'api::link.link'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -81,7 +82,7 @@ export interface ComponentsNavItem extends Struct.ComponentSchema {
     icon: 'link';
   };
   attributes: {
-    href: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.Relation<'oneToOne', 'api::link.link'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
