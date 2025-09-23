@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_components_nav_icons",
+    "info": {
+        "displayName": "NavIcon",
+        "icon": "check"
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "href": {
+            "type": "string",
+            "required": true
+        }
+    },
+    "config": {}
+}

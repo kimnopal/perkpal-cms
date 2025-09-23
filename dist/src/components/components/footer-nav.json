@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_components_footer_navs",
+    "info": {
+        "displayName": "FooterNav",
+        "icon": "stack"
+    },
+    "options": {},
+    "attributes": {
+        "nav_header": {
+            "type": "string",
+            "required": true
+        },
+        "NavItem": {
+            "type": "component",
+            "component": "components.nav-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

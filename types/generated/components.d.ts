@@ -12,6 +12,18 @@ export interface ComponentsFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsFooterNav extends Struct.ComponentSchema {
+  collectionName: 'components_components_footer_navs';
+  info: {
+    displayName: 'FooterNav';
+    icon: 'stack';
+  };
+  attributes: {
+    nav_header: Schema.Attribute.String & Schema.Attribute.Required;
+    NavItem: Schema.Attribute.Component<'components.nav-item', true>;
+  };
+}
+
 export interface ComponentsHeader extends Struct.ComponentSchema {
   collectionName: 'components_components_headers';
   info: {
@@ -46,6 +58,30 @@ export interface ComponentsHeroCard extends Struct.ComponentSchema {
   };
   attributes: {
     subtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsNavIcon extends Struct.ComponentSchema {
+  collectionName: 'components_components_nav_icons';
+  info: {
+    displayName: 'NavIcon';
+    icon: 'check';
+  };
+  attributes: {
+    href: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsNavItem extends Struct.ComponentSchema {
+  collectionName: 'components_components_nav_items';
+  info: {
+    displayName: 'NavItem';
+    icon: 'link';
+  };
+  attributes: {
+    href: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -88,9 +124,12 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.faq': ComponentsFaq;
+      'components.footer-nav': ComponentsFooterNav;
       'components.header': ComponentsHeader;
       'components.hero': ComponentsHero;
       'components.hero-card': ComponentsHeroCard;
+      'components.nav-icon': ComponentsNavIcon;
+      'components.nav-item': ComponentsNavItem;
       'components.seo': ComponentsSeo;
       'components.subtitle': ComponentsSubtitle;
       'components.title': ComponentsTitle;
