@@ -30,6 +30,12 @@
             "relation": "oneToMany",
             "target": "api::perk.perk",
             "mappedBy": "category"
+        },
+        "journals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::journal.journal",
+            "mappedBy": "category"
         }
     }
 }

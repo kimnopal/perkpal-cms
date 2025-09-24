@@ -24,6 +24,12 @@
             "relation": "manyToMany",
             "target": "api::perk.perk",
             "mappedBy": "tags"
+        },
+        "journals": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::journal.journal",
+            "mappedBy": "tags"
         }
     }
 }

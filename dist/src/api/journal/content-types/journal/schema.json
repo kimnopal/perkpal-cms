@@ -1,0 +1,70 @@
+{
+    "kind": "collectionType",
+    "collectionName": "journals",
+    "info": {
+        "singularName": "journal",
+        "pluralName": "journals",
+        "displayName": "Journal"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "title",
+            "required": true
+        },
+        "excerpt": {
+            "type": "text",
+            "required": true
+        },
+        "date": {
+            "type": "datetime",
+            "required": true
+        },
+        "category": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::category.category",
+            "inversedBy": "journals"
+        },
+        "author": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "journals"
+        },
+        "banner": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "preface": {
+            "type": "richtext"
+        },
+        "content": {
+            "type": "richtext",
+            "required": true
+        },
+        "tags": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::tag.tag",
+            "inversedBy": "journals"
+        },
+        "featured": {
+            "type": "boolean",
+            "required": true,
+            "default": false
+        }
+    }
+}
