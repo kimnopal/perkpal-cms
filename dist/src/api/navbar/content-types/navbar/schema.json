@@ -11,10 +11,20 @@
     },
     "pluginOptions": {},
     "attributes": {
+        "Logo": {
+            "type": "component",
+            "component": "components.logo",
+            "repeatable": false
+        },
         "NavItem": {
             "type": "component",
             "component": "components.nav-item",
             "repeatable": true
+        },
+        "CTAButton": {
+            "type": "component",
+            "component": "components.button",
+            "repeatable": false
         }
     }
 }

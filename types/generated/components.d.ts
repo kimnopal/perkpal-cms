@@ -169,6 +169,18 @@ export interface ComponentsHowItWorksItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsLogo extends Struct.ComponentSchema {
+  collectionName: 'components_components_logos';
+  info: {
+    displayName: 'Logo';
+    icon: 'crown';
+  };
+  attributes: {
+    link: Schema.Attribute.Relation<'oneToOne', 'api::link.link'>;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsNavIcon extends Struct.ComponentSchema {
   collectionName: 'components_components_nav_icons';
   info: {
@@ -323,6 +335,7 @@ declare module '@strapi/strapi' {
       'components.hero-card': ComponentsHeroCard;
       'components.how-it-works': ComponentsHowItWorks;
       'components.how-it-works-item': ComponentsHowItWorksItem;
+      'components.logo': ComponentsLogo;
       'components.nav-icon': ComponentsNavIcon;
       'components.nav-item': ComponentsNavItem;
       'components.seo': ComponentsSeo;

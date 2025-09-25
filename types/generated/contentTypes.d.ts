@@ -614,12 +614,14 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    CTAButton: Schema.Attribute.Component<'components.button', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::navbar.navbar'
     > &
       Schema.Attribute.Private;
+    Logo: Schema.Attribute.Component<'components.logo', false>;
     NavItem: Schema.Attribute.Component<'components.nav-item', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
