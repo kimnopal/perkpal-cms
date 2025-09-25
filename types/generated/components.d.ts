@@ -95,8 +95,8 @@ export interface ComponentsFaq extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
