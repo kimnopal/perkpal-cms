@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_about_who_we_serve_items",
+    "info": {
+        "displayName": "WhoWeServeItem",
+        "icon": "book"
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "type": "text",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        }
+    },
+    "config": {}
+}

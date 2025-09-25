@@ -34,10 +34,6 @@
         "form_submission"
       ]
     },
-    "redemption_value": {
-      "type": "string",
-      "required": true
-    },
     "valid_from": {
       "type": "date"
     },

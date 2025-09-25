@@ -384,11 +384,11 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     FAQ: Schema.Attribute.Component<'components.faq', true>;
+    HeroAbout: Schema.Attribute.Component<'about.about-hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -397,11 +397,11 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'components.seo', false>;
-    subtitle: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    WhatWeDo: Schema.Attribute.Component<'about.what-we-do', false>;
+    WhoWeServe: Schema.Attribute.Component<'about.who-we-serve', false>;
   };
 }
 
@@ -517,6 +517,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Hero: Schema.Attribute.Component<'components.hero', false>;
+    HowItWorks: Schema.Attribute.Component<'components.how-it-works', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -627,6 +628,51 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPartnerWithUsPagePartnerWithUsPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'partner_with_us_pages';
+  info: {
+    displayName: 'Partner With Us Page';
+    pluralName: 'partner-with-us-pages';
+    singularName: 'partner-with-us-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FAQPWU: Schema.Attribute.Component<'partner-with-us.faqpwu', false>;
+    GetStartedPWU: Schema.Attribute.Component<
+      'partner-with-us.get-started-pwu',
+      false
+    >;
+    HeroPWU: Schema.Attribute.Component<
+      'partner-with-us.hero-partner-with-us',
+      false
+    >;
+    HowItWorksPWU: Schema.Attribute.Component<
+      'partner-with-us.how-it-works-partner-with-us',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partner-with-us-page.partner-with-us-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhyPartnerWithUs: Schema.Attribute.Component<
+      'partner-with-us.why-partner-with-us',
+      false
+    >;
+  };
+}
+
 export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
   collectionName: 'perks';
   info: {
@@ -655,7 +701,6 @@ export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
       ['affiliate_link', 'coupon_code', 'form_submission']
     > &
       Schema.Attribute.Required;
-    redemption_value: Schema.Attribute.String & Schema.Attribute.Required;
     short_description: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
     sub_category: Schema.Attribute.Relation<
@@ -1249,6 +1294,7 @@ declare module '@strapi/strapi' {
       'api::journal.journal': ApiJournalJournal;
       'api::link.link': ApiLinkLink;
       'api::navbar.navbar': ApiNavbarNavbar;
+      'api::partner-with-us-page.partner-with-us-page': ApiPartnerWithUsPagePartnerWithUsPage;
       'api::perk.perk': ApiPerkPerk;
       'api::sub-category.sub-category': ApiSubCategorySubCategory;
       'api::tag.tag': ApiTagTag;

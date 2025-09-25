@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_partner_with_us_why_partner_with_us_items",
+  "info": {
+    "displayName": "WhyPartnerWithUsItem",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

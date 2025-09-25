@@ -11,21 +11,20 @@
     },
     "pluginOptions": {},
     "attributes": {
-        "title": {
-            "type": "string",
-            "required": true
+        "HeroAbout": {
+            "type": "component",
+            "component": "about.about-hero",
+            "repeatable": false
         },
-        "subtitle": {
-            "type": "string",
-            "required": true
+        "WhatWeDo": {
+            "type": "component",
+            "component": "about.what-we-do",
+            "repeatable": false
         },
-        "background": {
-            "type": "media",
-            "multiple": false,
-            "required": true,
-            "allowedTypes": [
-                "images"
-            ]
+        "WhoWeServe": {
+            "type": "component",
+            "component": "about.who-we-serve",
+            "repeatable": false
         },
         "FAQ": {
             "type": "component",

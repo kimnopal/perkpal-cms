@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_partner_with_us_hero_partner_withuses",
+  "info": {
+    "displayName": "HeroPWU",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "CTAButton": {
+      "type": "component",
+      "component": "components.button",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}

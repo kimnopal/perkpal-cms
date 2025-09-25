@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_about_faq_abouts",
+    "info": {
+        "displayName": "FAQAbout",
+        "icon": "bulletList"
+    },
+    "options": {},
+    "attributes": {
+        "FAQ": {
+            "type": "component",
+            "component": "components.faq",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

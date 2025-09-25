@@ -16,6 +16,11 @@
             "component": "components.hero",
             "repeatable": false
         },
+        "HowItWorks": {
+            "type": "component",
+            "component": "components.how-it-works",
+            "repeatable": false
+        },
         "SEO": {
             "type": "component",
             "component": "components.seo",

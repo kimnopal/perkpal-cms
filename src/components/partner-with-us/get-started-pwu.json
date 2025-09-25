@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_partner_with_us_get_started_pwus",
+  "info": {
+    "displayName": "GetStartedPWU",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "CTAButton": {
+      "type": "component",
+      "component": "components.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

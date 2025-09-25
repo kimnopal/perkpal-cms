@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_partner_with_us_how_it_works_item_partner_withuses",
+    "info": {
+        "displayName": "HowItWorksItemPWU",
+        "icon": "bulletList"
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "type": "text",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        }
+    },
+    "config": {}
+}

@@ -1,7 +1,7 @@
 {
     "collectionName": "components_components_heroes",
     "info": {
-        "displayName": "Hero",
+        "displayName": "HeroHome",
         "icon": "crown"
     },
     "options": {},
@@ -26,6 +26,17 @@
             "type": "component",
             "component": "components.hero-card",
             "repeatable": true
+        },
+        "ButtonTop": {
+            "type": "component",
+            "component": "components.button",
+            "repeatable": false,
+            "required": false
+        },
+        "ButtonBottom": {
+            "type": "component",
+            "component": "components.button",
+            "repeatable": false
         }
     },
     "config": {}

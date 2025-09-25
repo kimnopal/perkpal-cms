@@ -1,0 +1,24 @@
+{
+    "collectionName": "components_components_how_it_works",
+    "info": {
+        "displayName": "HowItWorks",
+        "icon": "bulletList"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "subtitle": {
+            "type": "text",
+            "required": true
+        },
+        "HowItWorksItem": {
+            "type": "component",
+            "component": "components.how-it-works-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_partner_with_us_why_partner_withuses",
+  "info": {
+    "displayName": "WhyPartnerWithUs",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "WhyPartnerWithUsItem": {
+      "type": "component",
+      "component": "partner-with-us.why-partner-with-us-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

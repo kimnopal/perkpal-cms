@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "partner_with_us_pages",
+  "info": {
+    "singularName": "partner-with-us-page",
+    "pluralName": "partner-with-us-pages",
+    "displayName": "Partner With Us Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroPWU": {
+      "type": "component",
+      "component": "partner-with-us.hero-partner-with-us",
+      "repeatable": false
+    },
+    "WhyPartnerWithUs": {
+      "type": "component",
+      "component": "partner-with-us.why-partner-with-us",
+      "repeatable": false
+    },
+    "HowItWorksPWU": {
+      "type": "component",
+      "component": "partner-with-us.how-it-works-partner-with-us",
+      "repeatable": false
+    },
+    "FAQPWU": {
+      "type": "component",
+      "component": "partner-with-us.faqpwu",
+      "repeatable": false
+    },
+    "GetStartedPWU": {
+      "type": "component",
+      "component": "partner-with-us.get-started-pwu",
+      "repeatable": false
+    }
+  }
+}

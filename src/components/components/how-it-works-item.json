@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_how_it_works_items",
+  "info": {
+    "displayName": "HowItWorksItem",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

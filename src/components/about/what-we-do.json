@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_what_we_dos",
+  "info": {
+    "displayName": "WhatWeDo",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "WhatWeDoItem": {
+      "type": "component",
+      "component": "about.what-we-do-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
