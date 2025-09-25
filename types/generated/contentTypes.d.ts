@@ -676,6 +676,39 @@ export interface ApiPartnerWithUsPagePartnerWithUsPage
   };
 }
 
+export interface ApiPerkPagePerkPage extends Struct.SingleTypeSchema {
+  collectionName: 'perk_pages';
+  info: {
+    displayName: 'Perk Page';
+    pluralName: 'perk-pages';
+    singularName: 'perk-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::perk-page.perk-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    show_redemption_method: Schema.Attribute.Enumeration<
+      ['all', 'affiliate_link', 'coupon_code', 'lead_form']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'all'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
   collectionName: 'perks';
   info: {
@@ -701,7 +734,7 @@ export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
     og_image: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     redemption_method: Schema.Attribute.Enumeration<
-      ['affiliate_link', 'coupon_code', 'form_submission']
+      ['affiliate_link', 'coupon_code', 'lead_form']
     > &
       Schema.Attribute.Required;
     short_description: Schema.Attribute.String;
@@ -1298,6 +1331,7 @@ declare module '@strapi/strapi' {
       'api::link.link': ApiLinkLink;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::partner-with-us-page.partner-with-us-page': ApiPartnerWithUsPagePartnerWithUsPage;
+      'api::perk-page.perk-page': ApiPerkPagePerkPage;
       'api::perk.perk': ApiPerkPerk;
       'api::sub-category.sub-category': ApiSubCategorySubCategory;
       'api::tag.tag': ApiTagTag;

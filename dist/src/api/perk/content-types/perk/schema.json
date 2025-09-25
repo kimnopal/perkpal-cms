@@ -31,7 +31,7 @@
             "enum": [
                 "affiliate_link",
                 "coupon_code",
-                "form_submission"
+                "lead_form"
             ]
         },
         "valid_from": {

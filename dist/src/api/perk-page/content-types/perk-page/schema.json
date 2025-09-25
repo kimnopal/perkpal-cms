@@ -1,0 +1,30 @@
+{
+    "kind": "singleType",
+    "collectionName": "perk_pages",
+    "info": {
+        "singularName": "perk-page",
+        "pluralName": "perk-pages",
+        "displayName": "Perk Page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "show_redemption_method": {
+            "type": "enumeration",
+            "required": true,
+            "default": "all",
+            "enum": [
+                "all",
+                "affiliate_link",
+                "coupon_code",
+                "lead_form"
+            ]
+        },
+        "email": {
+            "type": "string",
+            "required": true
+        }
+    }
+}
