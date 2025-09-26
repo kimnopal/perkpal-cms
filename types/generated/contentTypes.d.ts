@@ -720,6 +720,7 @@ export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    banner: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -731,7 +732,6 @@ export interface ApiPerkPerk extends Struct.CollectionTypeSchema {
     logo: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     long_description: Schema.Attribute.Text;
-    og_image: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     redemption_method: Schema.Attribute.Enumeration<
       ['affiliate_link', 'coupon_code', 'lead_form']

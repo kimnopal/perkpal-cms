@@ -19,6 +19,14 @@
       "type": "uid",
       "targetField": "title"
     },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "short_description": {
       "type": "string"
     },
@@ -73,14 +81,6 @@
     },
     "featured": {
       "type": "boolean"
-    },
-    "og_image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     }
   }
 }
